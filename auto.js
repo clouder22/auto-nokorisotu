@@ -1,6 +1,11 @@
 var http = require('http');
-var nokori;
+var nokori = 334;
+function Counter(){
+  nokori--;
+  console.log(nokori);
+}
+const interval = setInterval(Counter , 1000)
 var server = http.createServer(function(req, res) {
-  res.write("AA   BB");
+  console.log(nokori);
   res.end();
-}).listen(8080)
+}).listen(8080);
